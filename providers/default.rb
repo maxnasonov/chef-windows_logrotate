@@ -28,7 +28,7 @@ action :enable do
     username: new_resource.username,
     command: "#{node['windows_logrotate']['install_dir']}\\logrotate.exe",
     arguments: "#{verbose_flag}#{force_flag}-s \"#{state_path}\" \"#{conf_path}\"",
-    working_directory: content_dir
+    working_directory: content_dir,
   }
 
   schtask_path = "#{content_dir}\\#{new_resource.name}.xml"
