@@ -41,7 +41,7 @@ action :enable do
   end
 
   execute "schtask #{new_resource.name}" do
-    sensitive new_resource.sensitive
+    sensitive new_resource.confidential
     command "schtasks /Create /F /TN \"#{new_resource.name}\" /XML \"#{schtask_path}\" /NP " \
         "/RU \"#{new_resource.username}\" /RP \"#{new_resource.password}\""
     action :nothing
@@ -49,7 +49,7 @@ action :enable do
   end
 
   execute "run schtask #{new_resource.name} immediately" do
-    sensitive new_resource.sensitive
+    sensitive new_resource.confidential
     command "schtasks /Run /TN \"#{new_resource.name}\" "
     action :nothing
     only_if { new_resource.run_immediately }
