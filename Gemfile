@@ -4,7 +4,7 @@ gem 'berkshelf'
 gem 'chef', '~> 12.6'
 gem 'chefspec'
 gem 'foodcritic'
-gem 'rubocop'
+gem 'cookstyle'
 
 group :integration do
   gem 'kitchen-vagrant'
