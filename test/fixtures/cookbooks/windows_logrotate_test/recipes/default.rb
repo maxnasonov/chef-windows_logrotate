@@ -7,7 +7,6 @@ windows_logrotate 'logrotate test' do
   username node['windows_logrotate_test']['username']
   password node['windows_logrotate_test']['password']
   run_immediately true
-  confidential false
   conf <<-EOF
 C:\\test.log {
   missingok

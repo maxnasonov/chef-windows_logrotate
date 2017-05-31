@@ -69,8 +69,7 @@ Defaults to resource block name.
 Default: `Administrator`.
 * `password` - Required to create scheduled task. 
 * `conf` - Required logroate configuration. 
-* `verbose` - Turns on verbose mode. Confidential will need to be false 
-in order to see output.
+* `verbose` - Turns on verbose mode. 
 * `force` - Tells logrotate to force the rotation, even if it doesn't 
 think this is necessary. Sometimes this is useful after adding new 
 entries to a logrotate config file, or if old log files have been 
@@ -86,8 +85,6 @@ Default: `windows_logrotate`.
 Default: `logrotate.conf.erb`.
 * `schtask_tmpl` - Sets the schtask template source. 
 Default: `schtask.xml.erb`.
-* `confidential` - Suppress logging sensitive information. 
-Default: `true`.
 
 ## ChefSpec Matchers
 
