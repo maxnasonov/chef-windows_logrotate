@@ -41,8 +41,9 @@ action :enable do
   end
 
   execute "schtask #{new_resource.name}" do
-    command "schtasks /Create /F /TN \"#{new_resource.name}\" /XML \"#{schtask_path}\" /NP " \
-        "/RU \"#{new_resource.username}\" /RP \"#{new_resource.password}\""
+    command "schtasks /Create /F /TN \"#{new_resource.name}\" /XML \"#{schtask_path}\" /NP"
+    user new_resource.username
+    password new_resource.password
     action :nothing
     notifies :run, "execute[run schtask #{new_resource.name} immediately]", :immediately
   end
