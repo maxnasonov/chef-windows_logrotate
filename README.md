@@ -36,6 +36,7 @@ windows_logrotate 'logrotate test' do
   username user
   password pass
   run_immediately true
+  confidential false
   conf <<-EOF
 C:\\test.log {
     missingok
