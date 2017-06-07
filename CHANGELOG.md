@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.2.0 2017-06-01
+## 0.2.0 2017-06-07
 
 - Replace sensitive attribute with confidential attribute for Chef 13
 - Flagged password as sensitive for Chef 13
