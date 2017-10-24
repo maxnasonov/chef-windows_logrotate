@@ -4,7 +4,7 @@ if platform?('windows')
   remote_file "download #{node['windows_logrotate']['url']}" do
     path cache_path
     source node['windows_logrotate']['url']
-    checksum node['windows_logrotate']['sha256']
+    checksum node['windows_logrotate']['md5']
     notifies :run, "powershell_script[unzip #{cache_path}]", :immediately
   end
 
