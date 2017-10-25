@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.2.1 2017-10-25
+
+- Update version of logrotate installer
+
+
 ## 0.2.0 2017-06-07
 
 - Replace sensitive attribute with confidential attribute for Chef 13
