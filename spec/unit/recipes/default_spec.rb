@@ -9,10 +9,10 @@ describe 'windows_logrotate::default' do
 
   it 'downloads logrotateSetup' do
     expect(chef_run).to create_remote_file(
-      "download https://pilotfiber.dl.sourceforge.net/project/logrotatewin/logrotateSetup_#{VERSION}.zip"
+      "download http://pilotfiber.dl.sourceforge.net/project/logrotatewin/logrotateSetup_#{VERSION}.zip"
     ).with(
       path: "#{CACHE}\\logrotateSetup_#{VERSION}.zip",
-      source: "https://pilotfiber.dl.sourceforge.net/project/logrotatewin/logrotateSetup_#{VERSION}.zip"
+      source: "http://pilotfiber.dl.sourceforge.net/project/logrotatewin/logrotateSetup_#{VERSION}.zip"
     )
   end
 
