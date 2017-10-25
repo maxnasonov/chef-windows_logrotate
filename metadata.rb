@@ -6,7 +6,7 @@ description 'Installs/Configures LogRotate for Windows'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/dhoer/chef-windows_logrotate'
 issues_url 'https://github.com/dhoer/chef-windows_logrotate/issues'
-version '0.2.0'
+version '0.2.1'
 
 chef_version '>= 12.6'
 
